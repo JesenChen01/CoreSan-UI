@@ -1,0 +1,9 @@
+node_modules
+dist
+coverage
+*.lock
+pnpm-lock.yaml
+.changeset
+.vitepress/cache
+*.d.ts
+
