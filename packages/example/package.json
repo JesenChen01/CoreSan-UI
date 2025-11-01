@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "coresan": "^1.0.0",
+    "coresan": "^1.0.1",
     "vue": "^3.5.22"
   },
   "devDependencies": {

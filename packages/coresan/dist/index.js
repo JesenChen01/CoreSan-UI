@@ -1,12 +1,12 @@
-import { defineComponent as r, createElementBlock as l, openBlock as a, normalizeClass as p, renderSlot as i } from "vue";
-const m = /* @__PURE__ */ r({
+import { defineComponent as r, createElementBlock as l, openBlock as a, normalizeClass as p, renderSlot as m } from "vue";
+const i = /* @__PURE__ */ r({
   __name: "Button",
   props: {
     type: {}
   },
   emits: ["click"],
   setup(t, { emit: o }) {
-    console.log("👊 ~ props:", t);
+    console.log("👊 ~ components props:", t);
     const n = o, c = (s) => {
       n("click", s);
     };
@@ -14,7 +14,7 @@ const m = /* @__PURE__ */ r({
       class: p(["m-button", `m-button--${t.type}`]),
       onClick: c
     }, [
-      i(s.$slots, "default", {}, void 0, !0)
+      m(s.$slots, "default", {}, void 0, !0)
     ], 2));
   }
 }), u = (t, o) => {
@@ -22,7 +22,7 @@ const m = /* @__PURE__ */ r({
   for (const [n, c] of o)
     e[n] = c;
   return e;
-}, d = /* @__PURE__ */ u(m, [["__scopeId", "data-v-761ab672"]]), _ = [d], b = {
+}, d = /* @__PURE__ */ u(i, [["__scopeId", "data-v-821de223"]]), _ = [d], v = {
   install(t) {
     _.forEach((o) => {
       t.component(o.name, o);
@@ -31,5 +31,5 @@ const m = /* @__PURE__ */ r({
 };
 export {
   d as Button,
-  b as default
+  v as default
 };

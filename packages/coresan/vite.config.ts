@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { resolve } from 'path';
 import * as packageJson from './package.json';
+import dts from 'vite-plugin-dts';
 
 // 获取外部依赖（排除 peerDependencies）
 const external = [
@@ -9,7 +10,13 @@ const external = [
 ];
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), dts({
+    outDir: resolve(__dirname, 'dist'), // 输出到 dist 目录
+    include: ['src/**/*'], // 只处理 src 下的文件
+    insertTypesEntry: true, // 确保生成一个类型入口文件 (index.d.ts)
+    copyDtsFiles: false, // 不复制外部的 .d.ts 文件
+  }),
+  ],
   build: {
     // 启用 CSS 代码分离
     cssCodeSplit: true,

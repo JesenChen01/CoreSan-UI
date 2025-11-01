@@ -5,21 +5,21 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, defineEmits } from "vue";
+import { defineProps, defineEmits } from 'vue';
 
-type ButtonType = "default" | "primary" | "danger";
+type ButtonType = 'default' | 'primary' | 'danger';
 
 const props = defineProps<{
   type?: ButtonType;
 }>();
-console.log("👊 ~ props:", props)
+console.log('👊 ~ components props:', props);
 
 const emit = defineEmits<{
-  (e: "click", event: MouseEvent): void;
+  (e: 'click', event: MouseEvent): void;
 }>();
 
 const handleClick = (event: MouseEvent) => {
-  emit("click", event);
+  emit('click', event);
 };
 </script>
 
