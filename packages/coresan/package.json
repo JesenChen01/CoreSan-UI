@@ -17,7 +17,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "vue-tsc && vite build",
+    "build": "vue-tsc --declaration --emitDeclarationOnly && vite build",
     "test": "vitest --run"
   },
   "keywords": [],

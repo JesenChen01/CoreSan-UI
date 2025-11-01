@@ -9,6 +9,9 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "declaration": true,
+    "declarationDir": "dist",
+    "emitDeclarationOnly": true,
     "types": ["vite/client", "vitest/globals", "@vue/test-utils"],
     "baseUrl": ".",
     "paths": {
